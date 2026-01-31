@@ -1,0 +1,15 @@
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\bin\Debug\net8.0\PRN232.Shoppe.Service.deps.json
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\bin\Debug\net8.0\PRN232.Shoppe.Service.dll
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\bin\Debug\net8.0\PRN232.Shoppe.Service.pdb
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\bin\Debug\net8.0\PRN232.Shoppe.Repository.dll
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\bin\Debug\net8.0\PRN232.Shoppe.Repository.pdb
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\obj\Debug\net8.0\PRN232.Shoppe.Service.csproj.AssemblyReference.cache
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\obj\Debug\net8.0\PRN232.Shoppe.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\obj\Debug\net8.0\PRN232.Shoppe.Service.AssemblyInfoInputs.cache
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\obj\Debug\net8.0\PRN232.Shoppe.Service.AssemblyInfo.cs
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\obj\Debug\net8.0\PRN232.Shoppe.Service.csproj.CoreCompileInputs.cache
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\obj\Debug\net8.0\PRN232.S.217BA437.Up2Date
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\obj\Debug\net8.0\PRN232.Shoppe.Service.dll
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\obj\Debug\net8.0\refint\PRN232.Shoppe.Service.dll
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\obj\Debug\net8.0\PRN232.Shoppe.Service.pdb
+C:\FPTU\SP26\PRN233\Lab2_PRN233\Service\obj\Debug\net8.0\ref\PRN232.Shoppe.Service.dll

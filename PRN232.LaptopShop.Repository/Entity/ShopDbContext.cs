@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace PRN232.LaptopShop.Repository.Entities;
+namespace PRN232.LaptopShop.Repository.Entity;
 
 public partial class ShopDbContext : DbContext
 {
@@ -21,21 +21,17 @@ public partial class ShopDbContext : DbContext
 
     public virtual DbSet<Product> Products { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server= localhost;uid=sa;pwd=12345;Database=ShopDB;TrustServerCertificate=True");
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.AccountId).HasName("PK__Account__349DA5A6218FC281");
+            entity.HasKey(e => e.AccountId).HasName("PK__Account__349DA5A60C2B8F41");
 
             entity.ToTable("Account");
 
-            entity.HasIndex(e => e.Username, "UQ__Account__536C85E46C4A1D96").IsUnique();
+            entity.HasIndex(e => e.Username, "UQ__Account__536C85E4704CC8BF").IsUnique();
 
-            entity.HasIndex(e => e.Email, "UQ__Account__A9D1053440DCBFCD").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Account__A9D1053418ACF12D").IsUnique();
 
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
@@ -50,7 +46,7 @@ public partial class ShopDbContext : DbContext
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Category__19093A0BDCD59003");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Category__19093A0BB74B6BFA");
 
             entity.ToTable("Category");
 
@@ -59,15 +55,11 @@ public partial class ShopDbContext : DbContext
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
             entity.Property(e => e.Description).HasMaxLength(255);
-
-            entity.HasOne(d => d.Product).WithMany(p => p.Categories)
-                .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK_Category_Product");
         });
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Product__B40CC6CDB2612A28");
+            entity.HasKey(e => e.ProductId).HasName("PK__Product__B40CC6CDE27862EB");
 
             entity.ToTable("Product");
 
@@ -77,6 +69,10 @@ public partial class ShopDbContext : DbContext
             entity.Property(e => e.Price).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.ProductName).HasMaxLength(200);
             entity.Property(e => e.StockQuantity).HasDefaultValue(0);
+
+            entity.HasOne(d => d.Category).WithMany(p => p.Products)
+                .HasForeignKey(d => d.CategoryId)
+                .HasConstraintName("FK_Product_Category");
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "zhq+XmBWIJQ=",
+  "dgSpecHash": "5KyiXyTMmMw=",
   "success": true,
-  "projectFilePath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Service\\PRN232.LaptopShop.Service.csproj",
+  "projectFilePath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Service\\PRN232.LaptopShop.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.17\\microsoft.aspnetcore.authentication.jwtbearer.8.0.17.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.4\\microsoft.data.sqlclient.5.1.4.nupkg.sha512",

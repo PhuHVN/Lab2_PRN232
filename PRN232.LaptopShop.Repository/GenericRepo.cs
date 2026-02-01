@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PRN232.LaptopShop.Repository.Entities;
+
+using PRN232.LaptopShop.Repository.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;

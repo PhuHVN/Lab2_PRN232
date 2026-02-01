@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PRN232.LaptopShop.Repository.Entities;
+namespace PRN232.LaptopShop.Repository.Entity;
 
 public partial class Account
 {

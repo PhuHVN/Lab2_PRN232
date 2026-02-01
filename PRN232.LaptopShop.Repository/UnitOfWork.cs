@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage;
-using PRN232.LaptopShop.Repository.Entities;
+using PRN232.LaptopShop.Repository.Entity;
 using PRN232.LaptopShop.Repository.Repo;
 using System;
 using System.Collections.Generic;

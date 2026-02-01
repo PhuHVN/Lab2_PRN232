@@ -4394,11 +4394,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Repository\\PRN232.LaptopShop.Repository.csproj",
+      "projectUniqueName": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Repository\\PRN232.LaptopShop.Repository.csproj",
       "projectName": "PRN232.LaptopShop.Repository",
-      "projectPath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Repository\\PRN232.LaptopShop.Repository.csproj",
+      "projectPath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Repository\\PRN232.LaptopShop.Repository.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Repository\\obj\\",
+      "outputPath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

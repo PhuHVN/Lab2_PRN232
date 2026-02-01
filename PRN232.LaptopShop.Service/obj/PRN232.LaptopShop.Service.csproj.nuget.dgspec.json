@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Service\\PRN232.LaptopShop.Service.csproj": {}
+    "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Service\\PRN232.LaptopShop.Service.csproj": {}
   },
   "projects": {
-    "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Repository\\PRN232.LaptopShop.Repository.csproj": {
+    "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Repository\\PRN232.LaptopShop.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Repository\\PRN232.LaptopShop.Repository.csproj",
+        "projectUniqueName": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Repository\\PRN232.LaptopShop.Repository.csproj",
         "projectName": "PRN232.LaptopShop.Repository",
-        "projectPath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Repository\\PRN232.LaptopShop.Repository.csproj",
+        "projectPath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Repository\\PRN232.LaptopShop.Repository.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Repository\\obj\\",
+        "outputPath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -95,14 +95,14 @@
         }
       }
     },
-    "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Service\\PRN232.LaptopShop.Service.csproj": {
+    "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Service\\PRN232.LaptopShop.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Service\\PRN232.LaptopShop.Service.csproj",
+        "projectUniqueName": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Service\\PRN232.LaptopShop.Service.csproj",
         "projectName": "PRN232.LaptopShop.Service",
-        "projectPath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Service\\PRN232.LaptopShop.Service.csproj",
+        "projectPath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Service\\PRN232.LaptopShop.Service.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Service\\obj\\",
+        "outputPath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -123,8 +123,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Repository\\PRN232.LaptopShop.Repository.csproj": {
-                "projectPath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN233\\PRN232.LaptopShop.Repository\\PRN232.LaptopShop.Repository.csproj"
+              "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Repository\\PRN232.LaptopShop.Repository.csproj": {
+                "projectPath": "C:\\FPTU\\SP26\\PRN233\\Lab2_PRN232\\PRN232.LaptopShop.Repository\\PRN232.LaptopShop.Repository.csproj"
               }
             }
           }
@@ -145,6 +145,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.17, )"

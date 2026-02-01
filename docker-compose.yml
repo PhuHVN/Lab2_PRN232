@@ -1,0 +1,37 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "StrongPass@123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1500:1433"
+    networks:
+      - excuses-network
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: myapi
+    ports:
+      - "8081:8080"
+    depends_on:
+      - sqlserver
+    environment:
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=ShopDb;User Id=sa;Password=StrongPass@123;TrustServerCertificate=True;"
+      Jwt__SecretKey: "c1ca0d2d94e9d5f0b8e74fea30aab058878729ca0b5dab6d697cbb141b9b9db6e12fa04a"
+      Jwt__Issuer: "Shoppe"
+      Jwt__Audience: "Shoppe"
+    networks:
+      - excuses-network
+
+networks:
+  excuses-network:
+
+
+volumes:
+  sqlserver-data:

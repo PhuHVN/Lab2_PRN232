@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
-namespace PRN232.LaptopShop.Repository.Entities;
+namespace PRN232.LaptopShop.Repository.Entity;
 
 public partial class Category
 {
@@ -11,9 +12,8 @@ public partial class Category
 
     public string? Description { get; set; }
 
-    public int ProductId { get; set; }
-
     public DateTime? CreatedAt { get; set; }
 
-    public virtual Product Product { get; set; } = null!;
+    [JsonIgnore]
+    public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 }

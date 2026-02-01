@@ -1,6 +1,11 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.OpenApi.Models;
+using PRN232.LaptopShop.API.Controllers;
+using PRN232.LaptopShop.Repository;
+using PRN232.LaptopShop.Repository.Entity;
+using PRN232.LaptopShop.Repository.Repo;
+using PRN232.LaptopShop.Service;
 using System.Security.Claims;
 using System.Text.Json;
 
@@ -11,7 +16,39 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(option =>
+{
+    option.EnableAnnotations();
+    option.SwaggerDoc("v1", new OpenApiInfo { Title = "LootCutAI API", Version = "v1" });
+
+    option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "JWT Authorization header using the Bearer scheme."
+    });
+
+    option.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+
+    option.SchemaGeneratorOptions.SchemaIdSelector = type => type.FullName;
+}
+);
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -97,17 +134,28 @@ builder.Services.AddAuthentication(options =>
             }
         };
     });
-//builder.Services.AddDbContext<ShopDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+//add db context
+builder.Services.AddDbContext<ShopDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+//add scope service
+builder.Services.AddScoped<UnitOfWork>();
+builder.Services.AddScoped<AccountService>();
+builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<CategoryService>();
+builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<AccountRepo>();
+builder.Services.AddScoped<ProductRepo>();
+builder.Services.AddScoped<CategoryRepo>();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(options =>
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+});
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 

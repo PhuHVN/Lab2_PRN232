@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PRN232.LaptopShop.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7da438887dda43848235f9f962b44fba2dace2b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+212f5631e93f1655b19f40ad744fe13af9e513a3")]
 [assembly: System.Reflection.AssemblyProductAttribute("PRN232.LaptopShop.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PRN232.LaptopShop.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

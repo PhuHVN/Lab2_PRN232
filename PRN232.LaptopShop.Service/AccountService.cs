@@ -8,5 +8,6 @@ namespace PRN232.LaptopShop.Service
 {
     public class AccountService
     {
+
     }
 }
